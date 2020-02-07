@@ -1,0 +1,75 @@
+{
+  "name": "vue-multiselection-box",
+  "version": "0.0.1",
+  "scripts": {
+    "build": "npm run build:umd & npm run build:es & npm run build:unpkg",
+    "build:umd": "rollup --config build/rollup.config.js --format umd --file dist/vue-multiselection-box.umd.js",
+    "build:es": "rollup --config build/rollup.config.js --format es --file dist/vue-multiselection-box.esm.js",
+    "build:unpkg": "rollup --config build/rollup.config.js --format iife --file dist/vue-multiselection-box.min.js"
+  },
+  "main": "dist/vue-multiselection-box.umd.js",
+  "module": "dist/vue-multiselection-box.esm.js",
+  "unpkg": "dist/vue-multiselection-box.min.js",
+  "browser": {
+    "./sfc": "src/components/multi-selection-box.vue"
+  },
+  "files": [
+    "dist/*",
+    "src/*",
+    "public/*",
+    "*.json",
+    "*.js"
+  ],
+  "dependencies": {
+    "vue": "^2.6.10"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^4.2.2",
+    "babel-eslint": "^10.0.3",
+    "eslint": "^5.16.0",
+    "eslint-plugin-vue": "^5.0.0",
+    "rollup": "^1.17.0",
+    "rollup-plugin-buble": "^0.19.8",
+    "rollup-plugin-commonjs": "^10.0.1",
+    "rollup-plugin-vue": "^5.0.1",
+    "vue": "^2.6.10",
+    "vue-template-compiler": "^2.6.10"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "rules": {},
+    "parserOptions": {
+      "parser": "babel-eslint"
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ],
+  "keywords": [
+    "vue",
+    "vue duallistbox",
+    "vue duallist",
+    "vue multiselect box",
+    "vue selection box",
+    "selection box",
+    "dual listbox",
+    "duallistbox",
+    "multiselect"
+  ],
+  "description": "",
+  "author": "Levent Anil Ozen",
+  "license": "MIT",
+  "homepage": "https://github.com/leventozen/vue-multiselection-box",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/leventozen/vue-multiselection-box"
+  }
+}
