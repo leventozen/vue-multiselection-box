@@ -1,4 +1,4 @@
-# Vue Duallistbox
+# Vue Multiselection Box
 
 Yet another multi selection box for Vue.
 
