@@ -2,11 +2,11 @@
 
 > Yet another multi selection box for Vue
 
-## Unsorted mode
+## Sorted mode
 
 ![vue-multiselection-box](./assets/gifs/sorted.gif)
 
-## Sorted mode
+## Unsorted mode
 
 ![vue-multiselection-box](./assets/gifs/unsorted.gif)
 
