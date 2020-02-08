@@ -1,30 +1,33 @@
-# Vue Duallistbox
+# VueMultiSelectionBox
 
-Yet another multi selection box for Vue.
+> Yet another multi selection box for Vue
 
-## Getting Started
+## Unsorted mode
+
+![vue-multiselection-box](./assets/gifs/sorted.gif)
+
+## Sorted mode
+
+![vue-multiselection-box](./assets/gifs/unsorted.gif)
+
+# Demo
+
+[Enjoy](https://codesandbox.io/embed/cool-https-sc1pk?fontsize=14&hidenavigation=1&theme=dark)
+
+# Installation
+
+
+NPM
 
 ```bash
-npm install vue-multiselection-box --save
+npm i --save vue-multiselection-box
 ```
 
-Demo: https://codesandbox.io/s/cool-https-sc1pk?fontsize=14&hidenavigation=1&theme=dark
+# Usage
 
-Template part:
-```html
-<div id="app">
-    <MultiSelectionBox
-      :base-list="baseList"
-      :selected-list="selectedList"
-      @updateBase="baseList = $event"
-      @updateSelected="selectedList = $event"
-      :isSortable="false"
-    />
-  </div>
-```
+## Script
 
-Script part:
-```javascript
+```js
 import MultiSelectionBox from "vue-multiselection-box";
 
 export default {
@@ -43,48 +46,79 @@ export default {
       { id: 2, name: "Person 2" },
       { id: 6, name: "Person 6" },
       { id: 7, name: "Person 7" }
-    ]
+    ],
+    mappingOptions: {
+      value: "name",
+      key: "id"
+    },
+    leftSection: {
+      text: "Available",
+      styles: {
+        backgroundColor: "#0acf97"
+      },
+      sortOption: null
+    },
+    rightSection: {
+      text: "Assigned",
+      styles: {
+        backgroundColor: "#727df5"
+      },
+      sortOption: null
+    },
+    isSortable: false
   })
 };
+
 ```
+## Template
+
+```html
+<MultiSelectionBox
+      :base-list="baseList"
+      :selected-list="selectedList"
+      :isSortable="true"
+      :mappingOptions="mappingOptions"
+      :leftSection="leftSection"
+      :rightSection="rightSection"
+      @updateBase="baseList = $event"
+      @updateSelected="selectedList = $event"
+/>
+```
+# Props API
+
+| Props                       | Type              | Required | Default                     |
+| --------------------------- | ----------------- | -------- | --------------------------- |
+| baseList                    | Array             | no       | *                           |
+| selectedList                | Array             | no       | **                          |
+| isSortable                  | Boolean           | no       | True                        |
+| mappingOptions              | Object            | no       | ***                         |
+| leftSection                 | Object            | no       | ****                        |
+| rightSection                | Object            | no       | *****                       |
 
 
-### Prerequisites
 
-TODO
+(*) baseList : Is a base list for your selection box. (Left side.)
 
-### Installing
+(**) selectedList : Is a selected list for your selection box. (Right side.)
 
-TODO
+(***) mappingOptions : is an object that holds information about your list items.
 
-## Testing
+(****) leftSection : is an object that holds information about the heading color, heading text and initial sort option for your left box.
 
-TODO
+(*****) rightSection : is an object that holds information about the heading color, heading text and initial sort option for your right box.
 
-## Deployment
 
-TODO
 
-## Built With
+# Upcoming features (Todo)
 
-TODO
+- Add more information for usage.
+- Make it more customizable.
 
-## Contributing
 
-TODO
+## Tests
 
-## Versioning
+Work in progress
 
-Initial version
+# License
 
-## Authors
-
-* **Levent Anil Ozen** - *Initial work* - [Levent Anil Ozen](https://github.com/leventozen)
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-TODO
+This project is licensed under [MIT License](http://en.wikipedia.org/wiki/MIT_License)
