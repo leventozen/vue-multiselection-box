@@ -4,7 +4,6 @@
 
 [![HitCount](http://hits.dwyl.com/leventozen/vue-multiselection-box.svg)](http://hits.dwyl.com/leventozen/vue-multiselection-box)
 
-
 ## Sorted mode
 
 ![vue-multiselection-box](./assets/gifs/sorted.gif)
