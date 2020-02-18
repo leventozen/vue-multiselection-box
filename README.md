@@ -2,11 +2,14 @@
 
 > Yet another multi selection box for Vue
 
-## Unsorted mode
+[![HitCount](http://hits.dwyl.com/leventozen/vue-multiselection-box.svg)](http://hits.dwyl.com/leventozen/vue-multiselection-box)
+
+
+## Sorted mode
 
 ![vue-multiselection-box](./assets/gifs/sorted.gif)
 
-## Sorted mode
+## Unsorted mode
 
 ![vue-multiselection-box](./assets/gifs/unsorted.gif)
 
@@ -108,11 +111,17 @@ export default {
 (*****) rightSection : is an object that holds information about the heading color, heading text and initial sort option for your right box.
 
 
+## Authors
+
+* **Levent Anil Ozen** - [leventozen](https://github.com/leventozen)
+* **Can Agriboz** - [agriboz](https://github.com/agriboz)
 
 # Upcoming features (Todo)
 
 - Add more information for usage.
 - Make it more customizable.
+- Add tests
+- Add drag and drop option
 
 
 ## Tests
